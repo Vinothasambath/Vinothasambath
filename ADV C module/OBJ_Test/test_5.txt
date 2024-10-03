@@ -1,0 +1,3014 @@
+Skip to main content
+LMS
+LMS
+Advanced C: 22038
+Started on	Saturday, 4 March 2023, 11:47 PM
+State	Finished
+Completed on	Sunday, 5 March 2023, 1:41 AM
+Time taken	1 hour 54 mins
+Grade	49.50 out of 100.00
+Question 1
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+
+What is the correct syntax to initialize bit-fields in an structure?
+a.
+struct temp
+{
+unsigned float a : 1;
+}s;
+
+
+b.
+struct temp
+{
+unsigned int a = 1;
+}s;
+
+c.
+struct temp
+{
+unsigned int a : 1;
+}s;
+
+d.
+struct temp
+{
+unsigned float a = 1;
+}s;
+
+
+
+Feedback
+Your answer is correct.
+The correct answer is:
+
+struct temp
+{
+unsigned int a : 1;
+}s;
+
+Question 2
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+#include "printf"
+void main()
+{
+        printf("How are you?");
+}
+
+
+a.
+Run time error
+
+b.
+Compiler Error
+
+
+c.
+How are you?
+
+
+d.
+Depends on compiler
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Compiler Error
+
+Question 3
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+enum myEnum { AB, BC };
+
+int main()
+
+{
+
+        enum myEnum a =4;
+
+        printf("%d", a);
+
+        return 0;
+
+}
+
+
+
+a.
+0
+
+b.
+1
+
+c.
+4
+
+d.
+Compiler error
+Feedback
+Your answer is correct.
+The correct answer is: 4
+Question 4
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    struct point
+
+    {
+
+        int x;
+
+        int y;
+
+    };
+
+    int main()
+
+    {
+
+        struct point p = {9};
+
+        struct point p1 = {9};
+
+        if(p == p1)
+
+            printf("Both are equal %d = %d\n", p.x);
+
+        else
+
+            printf("not equal\n");
+
+    }
+
+
+
+a.
+Both are equal 9 = 9
+
+b.
+depends on the standard
+
+c.
+Compile time error
+
+d.
+not equal
+Feedback
+Your answer is incorrect.
+The correct answer is: Compile time error
+Question 5
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+int main()
+
+{
+
+		FILE *fp, *fs, *ft ;
+
+		fp = fopen ( "A.C", "r" ) ;
+
+		fs = fopen ( "B.C", "r" ) ;
+
+		ft = fopen ( "C.C", "r" ) ;
+
+		fclose(fp, ft, fs);
+
+		return 0;
+
+}
+
+
+a.
+Only C.C
+
+
+b.
+Only A.C
+
+
+c.
+Compiler Error
+
+
+d.
+All the three files
+
+Feedback
+Your answer is correct.
+The correct answer is:
+Compiler Error
+
+Question 6
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+int main()
+
+{
+
+        struct a
+
+        {
+
+                category:1;
+
+                scheme:0;
+
+        };
+
+        printf("size = %d", sizeof(struct a));
+
+        return 0;
+
+}
+
+
+
+a.
+size = 4
+
+b.
+Compiler error
+
+c.
+size = 1
+
+d.
+size = {1-1}
+Feedback
+Your answer is correct.
+The correct answer is: Compiler error
+Question 7
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    struct student
+
+    {
+
+        char *c;
+
+    };
+
+    void main()
+
+    {
+
+        struct student n;  //(Assume address of n is 116, address of s is 220)
+
+        struct student *s = &n; 
+
+        (*s).c = "hello";
+
+        printf("%p = %p\n", s, &n);
+
+    }
+
+
+
+a.
+Compile Time Error
+
+b.
+116 = 116 Same Address
+
+c.
+Run time error
+
+d.
+220 = 116 Different address
+Feedback
+Your answer is incorrect.
+The correct answer is: 116 = 116 Same Address
+Question 8
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+Which one of the following options is TRUE about the following programs A and B? (Assume both are complete program)
+
+A.  char str[100];
+
+    strcpy(str,"Hello");
+
+    FILE *fp = fopen("Binary.txt", "wb");
+
+    fwrite(str,sizeof(char),strlen(str),fp);
+
+    fclose(fp);
+
+ B. char str[100];
+
+    strcpy(str,"Hello");
+
+    FILE *fp = fopen("Ascii.txt", "w");
+
+    fwrite(str,sizeof(char),strlen(str),fp);
+
+    fclose(fp);
+
+
+a.
+Both the programs throws compiler error
+
+
+b.
+Compiles successfully and both the programs give different output
+
+
+c.
+Compiles successfully and both the programs give the same output
+
+
+d.
+Compiles with warning and both the programs give the same output
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Compiles successfully and both the programs give the same output
+
+Question 9
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+Which of the following operation is illegal in structures?
+
+
+a.
+Pointer to a variable of the same structure
+
+
+b.
+Typecasting of structure
+
+
+c.
+Dynamic allocation of memory for structure
+
+
+d.
+All of the mentioned
+
+Feedback
+Your answer is correct.
+The correct answer is:
+Typecasting of structure
+
+Question 10
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+Structure may contain
+
+
+a.
+Any other structure
+
+
+b.
+Any other structure except themselves
+
+
+c.
+Any other structure except themselves and pointed to themselves
+
+
+d.
+All the above
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+All the above
+
+Question 11
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+typedef enum color { RED, BLUE, ORANGE = -7, BLACK, WHITE, GREEN}colors;
+
+int main()
+
+{
+
+    printf("%d %d %d %d %d %d\n", RED, BLUE, ORANGE, BLACK, WHITE, GREEN);
+
+}
+
+
+
+a.
+0 1 2 -7 -8 -9
+
+b.
+0 1 -7 -6 -5 -4
+
+c.
+Compile time error
+
+d.
+0 1 -7 2 3 4
+Feedback
+Your answer is correct.
+The correct answer is: 0 1 -7 -6 -5 -4
+Question 12
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    union u
+
+    {
+
+        struct
+
+        {
+
+            unsigned char x : 4;
+
+            unsigned int y : 2;
+
+        }p;
+
+        int x;
+
+    };
+
+    int main()
+
+    {
+
+        union u u.p.x = 9;
+
+        printf("%d\n", u.p.x);
+
+    }
+
+
+
+a.
+Compile time error
+
+b.
+Depends on the compiler
+
+c.
+9
+
+d.
+Segmentation fault
+Feedback
+Your answer is incorrect.
+The correct answer is: Compile time error
+Question 13
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+int main()
+{
+    enum Days{Sunday, Monday, Tuesday, Wednesday, Thursday,    Friday, Saturday};      
+    enum Days TheDay;
+    int j = 0;
+    printf("Please enter the day of the week (0 to 6)\n");
+    scanf("%d", (int *)&TheDay);
+    TheDay = j;
+    if(TheDay == Sunday || TheDay == Saturday)
+        printf("Hurray it is the weekend\n");
+    else
+        printf("Curses still at work\n");
+    return 0;
+}
+
+
+a.
+Compiler error
+
+b.
+Runtime error
+
+
+c.
+Hurray it is the weekend
+
+
+d.
+Curses still at work
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Hurray it is the weekend
+
+Question 14
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+#define FAILURE 0
+
+enum boo { FAILURE = 1, SUCCESS}boolean;
+
+int main()
+
+{
+
+        printf("%d %d", FAILURE, SUCCESS);
+
+}
+
+
+a.
+Compiler Error
+
+
+b.
+0 1
+
+
+c.
+1 0
+
+
+d.
+1 2
+
+Feedback
+Your answer is correct.
+The correct answer is:
+Compiler Error
+
+Question 15
+Correct
+Mark 3.00 out of 3.00
+Not flaggedFlag question
+Question text
+What is the output of following code?
+
+int main()
+{
+    union Test_union
+    {
+        int a; float b; long c;
+    }u;
+    struct Test_struct
+    {
+        int a; float b; long c;
+    }s;
+    u.a = 4;
+    u.b = 5;
+    u.c = 6;
+    s.a = u.a;
+    s.b = u.b;
+    s.c = u.c;
+    printf("%d %f %d",s.a,s.b, s.c);
+    return 0;
+}
+
+
+
+a.
+6 0.000000 6
+
+
+b.
+0 6.666666 0
+
+
+c.
+6 junk 6
+
+
+d.
+6 6.000000 6
+
+Feedback
+Your answer is correct.
+The correct answer is:
+6 0.000000 6
+
+Question 16
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+From the following options, select the operation that you can perform on the file when you open a file using the command.
+
+fp = fopen("filename", "r+"); 
+
+
+a.
+Read contents from the file and add new contents to the file
+
+
+b.
+Write contents to the file
+
+
+c.
+Read and modify only the existing contents of the file
+
+
+d.
+Only read contents from the file
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Read and modify only the existing contents of the file
+
+Question 17
+Correct
+Mark 2.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of the following code ?
+
+#define x 3+8
+
+int main()
+
+{
+
+    int i;
+
+    i = x * x * x;
+
+    printf("%d", i);
+
+}
+
+
+
+
+a.
+Compiler Error
+
+b.
+59
+
+c.
+1331
+
+d.
+11
+Feedback
+Your answer is correct.
+The correct answer is: 59
+Question 18
+Correct
+Mark 2.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+typedef struct my_structure
+{
+    char ch1;
+    double num3;
+    char ch2;
+    int num1;
+    short num2;
+        
+}my_struct;
+typedef union my_union
+{
+    char ch1;
+    double num6;
+    char ch2;
+    int num4;
+    short num5;
+}my_union;
+int main()
+{
+    printf("%lu %lu\n", sizeof(my_struct), sizeof(my_union));
+}
+
+
+
+a.
+24 8
+
+
+b.
+24 24
+
+
+c.
+32 8
+
+
+d.
+15 8
+
+Feedback
+Your answer is correct.
+The correct answer is:
+32 8
+
+Question 19
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+Consider the following program, Which statement is true?
+
+static int a = 0;
+char b[10];
+struct st
+{
+    float x,y;
+}pt;
+void main(void)
+{
+    static float v[] = {0};
+    static struct st pt1;
+    printf("%f %f", v[1], v[2]);
+}
+ 
+
+
+
+a.
+No variables reside in bss
+
+
+b.
+only v reside in bss
+
+
+c.
+All variables reside in bss
+
+
+d.
+Except v, all variables reside in bss
+
+Feedback
+Your answer is correct.
+The correct answer is:
+All variables reside in bss
+
+Question 20
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+The C-preprocessors are specified with Answer
+#
+symbol.
+
+Feedback
+The correct answer is: #
+Question 21
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+#define sdef struct s *
+
+struct s
+
+{
+
+        int x;
+
+        char y[2];
+
+};
+
+int main()
+
+{
+
+        sdef sobj1,sobj2;
+
+        sobj1 -> x = 10; sobj1->y[0] = '5';
+
+        sobj1 -> y[0] = '2'; sobj2 = sobj1;
+
+        printf("%d %c %c", sobj2 -> x, sobj2 ->y[0], sobj2 -> y[1]);
+
+        return 0;
+
+}
+
+
+
+a.
+Compiler error
+
+b.
+Runtime error
+
+c.
+10 5 2
+
+d.
+10 2 2
+Feedback
+Your answer is incorrect.
+The correct answer is: Compiler error
+Question 22
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+For what minimum value of x in a 32-bit Linux OS would make the size of s equal to 8 bytes?
+
+struct temp
+
+{
+
+    int a : 13;
+
+    int b : 8;
+
+    int c : x;
+
+}s;  
+
+
+a.
+32
+
+
+b.
+11
+
+
+c.
+8
+
+
+d.
+12
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+12
+
+Question 23
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+The below functions are used for __________.
+
+int ferror(FILE *stream);
+void clearerr(FILE *stream);
+int fileno(FILE *stream);
+
+
+
+a.
+Creating temporary file
+
+
+b.
+Low level I/O
+
+
+c.
+Stream status enquiries
+
+
+d.
+Reading and writing files
+
+Feedback
+Your answer is correct.
+The correct answer is:
+Stream status enquiries
+
+Question 24
+Partially correct
+Mark 0.50 out of 1.00
+Not flaggedFlag question
+Question text
+Which one of the following is the correct option that substitutes de-allocate memory in the following program?
+
+int main()
+{
+    struct ex
+    {
+        int i;
+        float j;
+        int *s;
+        char *ch;
+    };
+    struct ex *p ;
+    p = (struct ex *) malloc(sizeof(struct ex));
+    p ->s = (int *) malloc(5 * sizeof(int));
+    p -> ch = (char *)malloc(20);
+    // deallocate memory
+    return 0;
+}
+
+
+
+a.
+ free(s, p);
+
+
+b.
+ free(p);
+
+
+c.
+free(p -> s); freep(p -> ch); free(p);
+
+d.
+free(p -> ch); free(p -> s); free(p);
+
+Feedback
+Your answer is partially correct.
+You have correctly selected 1.
+The correct answers are: free(p -> s); freep(p -> ch); free(p);,
+free(p -> ch); free(p -> s); free(p);
+
+Question 25
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+The #elif directive cannot appear after the preprocessor #else directive.
+
+
+a.
+true
+
+
+b.
+false
+
+Feedback
+Your answer is correct.
+The correct answer is:
+true
+
+Question 26
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    #define MIN 0
+
+    #if defined(MIN) - (!defined(MAX))
+
+    #define MAX 17
+
+    #endif
+
+    int main()
+
+    {
+
+        printf("%d %d\n", MAX, MIN);
+
+        return 0;
+
+    }
+
+
+
+a.
+17 0
+
+b.
+Runtime Error
+
+c.
+Compile time error
+
+d.
+Undefined behaviour
+Feedback
+Your answer is incorrect.
+The correct answer is: Compile time error
+Question 27
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    #define SYSTEM 10
+
+    int main()
+
+    {
+
+        int a = 10;
+
+        #if SYSTEM == a
+
+        printf("a = %d ", a);
+
+        #endif
+
+        #if SYSTEM == 10
+
+        printf("Bye\n");
+
+        #endif
+
+    }
+
+
+
+a.
+Compiler Error
+
+b.
+a = 10
+
+c.
+Bye
+
+d.
+a = 10 Bye
+Feedback
+Your answer is incorrect.
+The correct answer is: Bye
+Question 28
+Correct
+Mark 2.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+int main()
+
+{
+
+    struct bitfields
+
+    {
+
+        int bits_1: 2;
+
+        int bits_2: 4;
+
+        int bits_3: 4;
+
+        int bits_4: 3;
+
+    }bit = {1, 3, 3, 2};
+
+    printf("%d %d %d %d", bit.bits_1, bit.bits_2, bit.bits_3, bit.bits_4);
+
+} 
+
+
+
+a.
+1 3 -3 2
+
+b.
+1 -3 -3 2
+
+c.
+1 3 3 2
+
+d.
+Compiler Error
+Feedback
+Your answer is correct.
+The correct answer is: 1 3 3 2
+Question 29
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    #define foo(m, n) " m ## n "
+
+    int main()
+
+    {
+
+        printf("%s\n", foo(4, 1));
+
+    }
+
+
+
+a.
+m ## n
+
+b.
+mn
+
+c.
+Compile time error
+
+d.
+41
+Feedback
+Your answer is correct.
+The correct answer is: m ## n
+Question 30
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    struct p
+
+    {
+
+        char *name;
+
+        struct p *next;
+
+    };
+
+    struct p *ptrary[10];
+
+    int main()
+
+    {
+
+        struct p p, q;
+
+        p.name = "114";
+
+        p.next = NULL;
+
+        ptrary[0] = &p;
+
+        strcpy(q.name, p.name);
+
+        ptrary[1] = &q;
+
+        printf("%s\n", ptrary[1]->name);
+
+        return 0;
+
+    }
+
+
+
+a.
+114
+
+b.
+Compile time error
+
+c.
+Segmentation fault/code crash
+
+d.
+Depends on the compiler
+Feedback
+Your answer is incorrect.
+The correct answer is: Segmentation fault/code crash
+Question 31
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    #define foo(m, n) m ## n
+
+    void myfunc();
+
+    int main()
+
+    {
+
+        myfunc();
+
+    }
+
+    void myfunc()
+
+    {
+
+        printf("%d\n", foo(3, 6));
+
+    }
+
+
+
+a.
+3  6
+
+b.
+36
+
+c.
+Compile time error
+
+d.
+Undefined behavior
+Feedback
+Your answer is correct.
+The correct answer is: 36
+Question 32
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    void main()
+
+    {
+
+        struct student
+
+        {
+
+            int no;
+
+            char name[20];
+
+        };
+
+        struct student s;
+
+        no = 7;
+
+        printf("%d", no);
+
+    }
+
+
+
+a.
+Junk
+
+b.
+Compile time error
+
+c.
+7
+
+d.
+Nothing will print
+Feedback
+Your answer is correct.
+The correct answer is: Compile time error
+Question 33
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+int main()
+
+{
+
+    FILE* fp = NULL;
+
+    fp = fopen("c:\newfolder\MyFile.txt", "r+");
+
+    return 0;
+
+} 
+
+
+
+
+a.
+Runtime error
+
+
+b.
+Doesn't compile
+
+
+c.
+Doesn't create any file even if it doesn't not exist
+
+
+d.
+It creates a file if doesn't exist
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Doesn't create any file even if it doesn't not exist
+
+Question 34
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+int main()
+
+{
+
+		union a
+
+		{
+
+				int i;
+
+				char ch[2];
+
+		};
+
+		union a u;
+
+		u.ch[0] = 02;
+
+		u.ch[1] = 01;
+
+		printf("%d\n",u.i);
+
+		return 0;
+
+}
+
+
+a.
+1
+
+
+b.
+Cannot predict output
+
+
+c.
+258
+
+
+d.
+2
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Cannot predict output
+
+Question 35
+Correct
+Mark 2.00 out of 2.00
+Not flaggedFlag question
+Question text
+If a variable is a pointer to a structure, then which of the following operator is used to access data members of the structure through the pointer variable?
+
+
+a.
+.
+
+
+b.
+->
+
+
+c.
+*
+
+
+d.
+&
+
+Feedback
+Your answer is correct.
+The correct answer is:
+->
+
+Question 36
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of this program?
+#define  SQR(x)  x*x
+
+int main() 
+
+{ 
+
+    int i = 3; 
+
+    i = SQR(i++); 
+
+    printf("%d", i); 
+
+}
+
+
+
+
+
+
+a.
+9
+
+b.
+Undefined Behaviour
+
+c.
+16
+
+d.
+12
+Feedback
+Your answer is incorrect.
+The correct answer is: Undefined Behaviour
+Question 37
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+struct st
+{
+    double x;
+    static char y;
+};
+int main()
+{
+    printf("%d", sizeof(struct st));
+    return 0;
+}  
+
+
+
+a.
+8
+
+
+b.
+Compiler Error
+
+
+c.
+16
+
+
+d.
+9
+
+Feedback
+Your answer is correct.
+The correct answer is:
+Compiler Error
+
+Question 38
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    void f();
+
+    int main()
+
+    {
+
+        #define foo(x, y) x / y + x
+
+        f();
+
+    }
+
+    void f()
+
+    {
+
+        printf("%d\n", foo(-7, 7));
+
+    }
+
+
+
+a.
+Undefined behaviour
+
+b.
+0
+
+c.
+-8
+
+d.
+Floating point Exception
+Feedback
+Your answer is incorrect.
+The correct answer is: -8
+Question 39
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the order for the following C declarations? (Assume it's a 64-bit machine)
+
+short a : 23;
+
+int long y : 63;  
+
+
+a.
+Legal, illegal
+
+
+b.
+Illegal, legal
+
+
+c.
+Legal, legal
+
+
+d.
+Illegal, illegal
+
+Feedback
+Your answer is correct.
+The correct answer is:
+Illegal, legal
+
+Question 40
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+void main(void)
+{
+    union
+    {
+        struct
+        {
+            char myChar1[2];
+            char myChar2[2];
+        }s1;
+        struct
+        {
+            int i;
+            int j;
+        }s2;
+    }u = {15, 1};
+    printf("%d %d", u.s2.i, u.s2.j);
+}
+
+
+a.
+0 271
+
+
+b.
+271 0
+
+
+c.
+12 0
+
+
+d.
+12 1
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+271 0
+
+Question 41
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+#define SWAP(z, x, y) z t=x;x=y;y=t;
+int main()
+{
+        char x = 'A', y = 'B';
+        if (x > y)
+                SWAP(char, x, y)
+        printf("x = %c, y = %c\n",x,y);
+}
+
+
+
+a.
+Compiler Error
+
+
+b.
+x = A, y = B
+
+
+c.
+x = B, y = A
+
+
+d.
+Run time error
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Compiler Error
+
+Question 42
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+struct virus
+
+{
+
+		char Name[25] ;
+
+		char Subname[20] ;
+
+		int size ;
+
+}
+
+v[2] ={"Harry Potter", "Deadly", 1813, "Dark Avenger", "Thanos", 1795 };
+
+int main ()
+
+{
+
+		int i ;
+
+		for (i = 0; i < 2; i++)
+
+				printf("%s, %s ", v[i].Name, v[i].Subname);
+
+		return 0;
+
+}
+
+
+a.
+Harry Potter, Deadly Dark Avenger, Thanos
+
+
+b.
+Harry Potter, Deadly
+
+
+c.
+Compiler Error
+
+
+d.
+Dark Avenger, Thanos
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Harry Potter, Deadly Dark Avenger, Thanos
+
+Question 43
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    void main()
+
+    {
+
+        struct student
+
+        {
+
+            int no;
+
+            char name[20];
+
+        };
+
+        struct student s;
+
+        s.no = 2;
+
+        printf("%s", s.name);
+
+    }
+
+
+
+a.
+2
+
+b.
+Segmentation Fault
+
+c.
+Junk
+
+d.
+Compile time error
+Feedback
+Your answer is incorrect.
+The correct answer is: Junk
+Question 44
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+#define a 20
+
+int main()
+
+{
+
+    const int a = 9;
+
+    printf("It prints %d", a);
+
+}
+
+
+
+a.
+It prints 9
+
+b.
+Compilation Error
+
+c.
+It prints 20
+
+d.
+Runtime Error
+Feedback
+Your answer is correct.
+The correct answer is: Compilation Error
+Question 45
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+union u
+{
+        int var;
+        unsigned char str[4];
+};
+int main()      
+{               
+        unsigned char tmp;
+        union u uObj;
+        uObj.var = 3;
+        tmp = uObj.str[1];
+        uObj.str[1] = uObj.str[0];
+        uObj.str[0] = tmp;
+        printf("%d", uObj.var);
+        return 0;       
+}
+
+
+
+a.
+3
+
+
+b.
+Runtime crash
+
+
+c.
+876
+
+
+d.
+768
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+768
+
+Question 46
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+#define a 15
+
+void foo();
+
+int main()
+
+{
+
+        printf("%d..",a); 
+
+        foo();
+
+        printf("%d",a);
+
+        return 0;
+
+}       
+
+void foo()
+
+{
+
+#undef a
+
+#define a 45
+
+}
+
+
+
+a.
+45..45
+
+b.
+15..15
+
+c.
+15..45
+
+d.
+45..15
+Feedback
+Your answer is incorrect.
+The correct answer is: 15..15
+Question 47
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+Can we simply re-arrange the members of the structure to reduce padding?
+
+
+a.
+Yes
+
+
+b.
+No
+
+Feedback
+Your answer is correct.
+The correct answer is:
+Yes
+
+Question 48
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    (Assuming size of int be 4)
+
+    struct temp
+
+    {
+
+        int a;
+
+        int b;
+
+        int c;
+
+    } p[] = {8};
+
+    main()
+
+    {
+
+        printf("%d", sizeof(p));
+
+    }
+
+
+
+a.
+8
+
+b.
+Cannot be estimated due to ambigous initialization of array
+
+c.
+16
+
+d.
+12
+Feedback
+Your answer is correct.
+The correct answer is: 12
+Question 49
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+To see preprocessor output Answer
+-E
+ option provide with gcc command
+
+Feedback
+The correct answer is: -E
+Question 50
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+#define A 10 - 10
+int main()
+{
+    int a;
+    a = A*A;
+    printf("%d", a);
+}
+
+
+Answer: 
+-100
+Feedback
+The correct answer is: -100
+Question 51
+Correct
+Mark 2.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    struct student
+
+    {
+
+        char *c;
+
+    };
+
+    void main()
+
+    {
+
+        struct student m;
+
+        struct student *s = &m;
+
+        s->c = "11225";
+
+        printf("%s", s->c);
+
+    }
+
+
+
+a.
+Run time error
+
+b.
+Nothing will print
+
+c.
+Depends on compiler
+
+d.
+11225
+Feedback
+Your answer is correct.
+The correct answer is: 11225
+Question 52
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+union u
+
+{
+
+		int var;
+
+		unsigned char str[4];
+
+};
+
+int main()
+
+{
+
+		unsigned char tmp;
+
+		union u uObj;
+
+		uObj.var = 2;
+
+		tmp = uObj.str[1];
+
+		uObj.str[1] = uObj.str[0];
+
+		uObj.str[0] = tmp;
+
+		printf("%d", uObj.var);
+
+		return 0;
+
+}
+
+
+a.
+1024
+
+
+b.
+Compiler error
+
+
+c.
+2
+
+
+d.
+512
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+512
+
+Question 53
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+union u
+
+{
+
+    struct
+
+    {
+
+        unsigned char x : 2;
+
+        unsigned int y : 2;
+
+    }p;
+
+    int x;
+
+};
+
+int main()
+
+{
+
+    union u u.p.x = 6;
+
+    printf("%d\n", u.p.x);
+
+} 
+
+
+
+a.
+6
+
+b.
+Depends on the standard
+
+c.
+Compile time error
+
+d.
+Depends on the compiler
+Feedback
+Your answer is incorrect.
+The correct answer is: Compile time error
+Question 54
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+
+What is output of the following code?
+
+#define a 53
+
+int main()
+
+{
+
+        #define a 11
+
+        printf("%d\n",a);
+
+}
+
+
+
+a.
+11
+
+b.
+Segmentation fault
+
+c.
+Compile time error
+
+d.
+53
+Feedback
+Your answer is incorrect.
+The correct answer is: 11
+Question 55
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+#include is called
+
+
+a.
+Preprocessor directive
+
+
+b.
+Inclusion directive
+
+
+c.
+File inclusion directive
+
+
+d.
+None of the above
+
+Feedback
+Your answer is correct.
+The correct answers are:
+Preprocessor directive,
+
+Inclusion directive,
+
+File inclusion directive
+
+Question 56
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+How would you insert pre-written code into a current program?
+
+
+a.
+#define
+
+
+b.
+#include
+
+
+c.
+#read
+
+d.
+#get
+
+Feedback
+Your answer is correct.
+The correct answer is:
+#include
+
+Question 57
+Correct
+Mark 2.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    struct student
+
+    {
+
+        char *c;
+
+        struct student *point;
+
+    };
+
+    void main()
+
+    {
+
+        struct student s;
+
+        struct student m;
+
+        m.point = s;
+
+        (m.point)->c = "128";
+
+        printf("%s", s.c);
+
+    }
+
+
+
+a.
+Runtime Error
+
+b.
+Compile time error
+
+c.
+Nothing will print
+
+d.
+128
+Feedback
+Your answer is correct.
+The correct answer is: Compile time error
+Question 58
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+struct student 
+
+{
+
+    int id;
+
+    char name[10];
+
+    float percentage;
+
+};
+
+int main() 
+
+{
+
+    struct student record[3];
+
+    printf("%d\n", sizeof(record));
+
+}
+
+
+
+a.
+18
+
+b.
+20
+
+c.
+54
+
+d.
+60
+Feedback
+Your answer is incorrect.
+The correct answer is: 60
+Question 59
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code? (Assume MyFile.txt contains "abcdefghij")
+
+#include <stdio.h>
+
+int main()
+
+{
+
+        FILE* fp = NULL;
+
+        unsigned char c;
+
+        fp = fopen("MyFile.txt","r");
+
+        while((c = getc(fp)) != EOF)
+
+                putchar(c);
+
+        fclose(fp);
+
+        return 0;
+
+}
+
+
+a.
+Infinite loop
+
+
+b.
+abcdefghij followed by infinite loop
+
+
+c.
+Runtime error
+
+
+d.
+Stack overflow                                                                                                                       
+
+Feedback
+Your answer is correct.
+The correct answer is:
+abcdefghij followed by infinite loop
+
+Question 60
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the correct sequence to free the allocated memory in the below program?
+
+struct p
+{
+    struct p *prev;
+    int x;
+    struct p *next;
+};
+int main()
+{
+    struct p *p1 = (struct p*)malloc(sizeof(struct p));
+    p1 -> x = 1;
+    p1 -> prev = (struct p*)malloc(sizeof(struct p));
+    p1 -> next = (struct p*)malloc(sizeof(struct p));
+    return 0;
+}
+
+
+
+a.
+free(p1); free(p1 -> next); free(p1->prev);
+
+
+b.
+free(p1->next); free(p1)
+
+
+c.
+free(p1); free(p1 ->prev);  free(p1 ->next); 
+
+
+d.
+ free(p1 ->prev);  free(p1 ->next); free(p1);
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+ free(p1 ->prev);  free(p1 ->next); free(p1);
+
+Question 61
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+int main()
+
+{
+
+		typedef struct{char ch;}st;
+
+		st s1 = {0}; 
+
+		st s2 = {0};		
+
+		if (s2.ch = s1.ch)
+
+				printf("Successful");
+
+		return 0;
+
+}
+
+
+a.
+Successful
+
+
+b.
+Nothing will print
+
+
+c.
+Compiler Error
+
+
+d.
+Runtime Error
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Nothing will print
+
+Question 62
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+#pragma pack(1)
+
+typedef struct sample
+{
+    char a;
+    int b;
+    char c;
+}sample_t;
+
+int main()
+{
+    printf("%zu", sizeof(sample_t));
+}  
+
+
+
+a.
+6
+
+
+b.
+8
+
+
+c.
+12
+
+
+d.
+9
+
+Feedback
+Your answer is correct.
+The correct answer is:
+6
+
+Question 63
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+#define putchar (c) printf("%c",c)
+
+void main()
+
+{
+
+        char s='4';
+
+        putchar (s);
+
+}
+
+
+
+
+a.
+4
+
+b.
+52
+
+c.
+Runtime error
+
+d.
+Compilation error
+Feedback
+Your answer is correct.
+The correct answer is: Compilation error
+Question 64
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+int main()
+{
+    enum Peoplevar1 {Alex=0, Tracy, Kristian} Girls;
+    enum Peoplevar2 {William=-1, Martin } Boys;
+    switch (Boys)
+    {
+        case William:
+                puts("William");
+                break;
+        case Martin:
+                puts("Martin");
+                break;
+        default:
+                puts("None");
+                break;
+    }
+    return 0;
+}
+
+
+
+a.
+Martin
+
+
+b.
+Compiler error
+
+
+c.
+William
+
+
+d.
+None
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+Martin
+
+Question 65
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+int main()
+
+{
+
+        typedef struct p *q;
+
+        struct p
+
+        {
+
+              int x;
+
+              char y;
+
+              q ptr;
+
+        };
+
+        struct p p = {11, 7, &p};
+
+        printf("%d\n", p.ptr->x);
+
+        return 0;
+
+}
+
+
+
+a.
+7
+
+b.
+11
+
+c.
+Warning (should not use ->)
+
+d.
+Compiler Error
+Feedback
+Your answer is incorrect.
+The correct answer is: 11
+Question 66
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+Consider the following statements
+
+X=> Different enumeration may have same name 
+
+Y=> Values must be distinct in the same enumeration
+
+
+a.
+X is true but Y is false
+
+
+b.
+both statements are true
+
+
+c.
+both statements are false
+
+
+d.
+X is false but Y is true
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+X is true but Y is false
+
+Question 67
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+Select the most appropriate functionality of the following declaration in handling errors in C
+
+int feof(FILE *stream); 
+
+
+a.
+Returns all the error messages if the file pointer reaches the end of file
+
+
+b.
+Returns a non-zero value if the error indicator is set for the stream
+
+
+c.
+Returns a non-zero value if the end of file indicator is set for the stream
+
+
+d.
+Returns zero if the error indicator is set for the stream
+
+Feedback
+Your answer is correct.
+The correct answer is:
+Returns a non-zero value if the end of file indicator is set for the stream
+
+Question 68
+Correct
+Mark 2.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of this C code?
+
+    struct student
+
+    {
+
+        char *name;
+
+    };
+
+    struct student fun(void)
+
+    {
+
+        struct student s;
+
+        s.name = "1303";
+
+        return s;
+
+    }
+
+    void main()
+
+    {
+
+        struct student m = fun();
+
+        printf("%s", m.name);
+
+    }
+
+
+
+a.
+1303
+
+b.
+Compiler Error
+
+c.
+Nothing will print
+
+d.
+Run time error
+Feedback
+Your answer is correct.
+The correct answer is: 1303
+Question 69
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+#define macIntFunc( n ) func( n )
+
+int func(int n)
+
+{
+
+		return ((n ^ n & n));
+
+}
+
+int main()
+
+{       
+
+		printf("%d", macIntFunc(8));
+
+		return 0;
+
+}
+
+
+a.
+Runtime error
+
+
+b.
+Compiler error
+
+
+c.
+1
+
+
+d.
+0
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+0
+
+Question 70
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+#define big(a, b) a > b ? a : b
+
+#define swap(a, b) temp = a; a = b; b = temp;
+
+int main()
+{
+        int a, b, temp;
+        a = 3, b = 5;
+        if ((3 + big(a, b)) <= b)
+        {
+                swap(a, b);
+        }
+        printf ("%d %d\n", a, b);
+}
+Answer: 
+3 5
+Feedback
+The correct answer is: 5 3
+Question 71
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+Preprocessor feature that supply line numbers and filenames to compiler is called?
+
+
+a.
+Line control
+
+
+b.
+macro substitution
+
+
+c.
+Selective inclusion
+
+
+d.
+Concatenation
+
+Feedback
+Your answer is correct.
+The correct answer is:
+Line control
+
+Question 72
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+Consider following code snippet. In the below code fp points to __________
+
+void main ()
+
+{
+
+    FILE *fp ;
+
+    fp = fopen ( "try.c", "r+") ;
+
+}
+
+
+a.
+The name of the file
+
+
+b.
+The last character in the file
+
+c.
+The first character in the file
+
+
+d.
+The first word in the file
+
+Feedback
+Your answer is correct.
+The correct answer is:
+The first character in the file
+
+Question 73
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+int main()
+
+{
+
+    struct simp
+
+    {
+
+        int i = 17;
+
+        char city[] = "Bangalore";
+
+    };
+
+    struct simp s1;
+
+    printf("%d ", s1.i);
+
+    printf("%s", s1.city);
+
+    return 0;
+
+}
+
+
+
+a.
+17 Bangalore
+
+b.
+Compiler Error
+
+c.
+Nothing will be displayed
+
+d.
+Runtime Error
+Feedback
+Your answer is correct.
+The correct answer is: Compiler Error
+Question 74
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What would be the size of the following union declaration?
+
+    union uTemp
+
+    {
+
+        double a;
+
+        int b[5];
+
+        char c;
+
+    }u;
+
+    (Assuming size of double = 8, size of int = 4, size of char = 1)
+
+
+
+a.
+8
+
+b.
+4
+
+c.
+29
+
+d.
+20
+Feedback
+Your answer is correct.
+The correct answer is: 20
+Question 75
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+An entire structure variable can be assigned to another structure variable if
+
+
+a.
+The two variables have the same composition
+
+
+b.
+The two variables are of same type
+
+
+c.
+Assignment of one structure variable to another is not possible
+
+
+d.
+Assignment of one structure variable to another is possible by type casting
+
+Feedback
+Your answer is correct.
+The correct answer is:
+The two variables are of same type
+
+Skip <span id="mod_quiz_navblock_title">Quiz navigation</span>
+Quiz navigation
+Show one page at a time

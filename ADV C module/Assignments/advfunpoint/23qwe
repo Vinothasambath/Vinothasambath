@@ -1,0 +1,76 @@
+/*Documentation
+NAME:Vinotha sambath
+DATE:10.2.2023
+DESCRIPTION:find the product of given matrix.
+SAMPLE INPUT:
+Enter number of rows : 3
+Enter number of columns : 3
+Enter values for 3 x 3 matrix :
+1      2      3
+1      2      3
+1      2      3
+Enter number of rows : 3
+Enter number of columns : 3
+Enter values for 3 x 3 matrix :
+
+1      1     1
+2      2     2
+3      3     3
+SAMPLE OUTPUT:
+Product of two matrix :
+14      14      14
+14      14      14
+14      14      14
+ */
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int matrix_mul(int **, int, int, int **, int, int, int **, int, int);
+
+
+int main()
+{
+    int **mat_A, **mat_B, **result;
+    int row_A,col_A ,row_B,col_B ,i,j,k;
+    
+    //MATRIX A
+    
+    printf("Enter number of rows : ");
+    scanf("%d",&row_A);
+    
+    printf("Enter number of columns : ");
+    scanf("%d",&col_A);
+
+    printf("Enter values for %d x %d matrix : ",row_A,col_A);
+
+    mat_A=malloc(row * sizeof(int *));
+    
+    for ( i = 0; i < row_A; i++ )
+    {  
+        mat_A[i] = malloc(col_A * sizeof(int));
+    }
+
+    for( i=0; i < row_A; i++ )
+    {
+        for( j=0; j < col_A; j++ )
+        {
+            scanf("%d",&mat_A[i][j]);
+        }
+    }
+
+    //MATRIX B
+    
+    printf("Enter number of rows : ");
+    scanf("%d",&row_B);
+    
+    printf("Enter number of columns : ");
+    scanf("%d",&col_B);
+
+
+
+    
+}
+
+
+

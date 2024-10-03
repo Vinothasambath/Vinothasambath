@@ -1,0 +1,60 @@
+/*Documentation
+NAME:Vinotha sambath
+DESCRIPTION: to implement strstr()
+ */
+
+#include<stdio.h>
+#include<stdio_ext.h>
+#include<string.h>
+
+char *my_strstr(const char *str1,const char *str2)
+{
+             while(*str1)
+             {
+                 if( *str2 == *str1 )
+                 { 
+                
+                    while(*str1 && *str2)
+                    {  
+                      if (*str1 != *str2)
+                      {   
+                          printf("%c\n",*str2);
+                          str1++;
+                          str2++;
+                      }
+
+                    }  
+                    return str1;
+                } 
+                 str1++;
+             }
+            
+
+        return --str1;
+
+
+}
+
+
+int main()
+{
+    char hay[30] ,need[5];
+    
+    puts("Enter the string");
+    fgets(hay,30,stdin);
+    
+    __fpurge(stdin);
+
+    puts("Enter the substring");
+    fgets(need,5,stdin);
+
+    char *ptr;
+    ptr=my_strstr(hay,need);
+
+    if( ptr == NULL )
+        printf("needle not found");
+    else
+        printf("the substring is %s\n",ptr);
+    return 0;
+}
+

@@ -1,0 +1,21 @@
+#include<stdio.h>
+
+
+int main()
+{
+    char *s[3]={"Array","of","strings"};
+
+
+    printf("%c %s %s\n",s[0][0],s[1],s[2]);
+    
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j !='\0';j++)
+        {
+             printf("%c ",s[i][j]);  //prints each character
+       
+        }
+        printf("\n");
+    }
+}
+                                           

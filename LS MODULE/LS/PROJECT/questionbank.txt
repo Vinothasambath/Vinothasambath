@@ -1,0 +1,25 @@
+1.what is the command to remove a file or directory in linux?
+a)rm
+b)rv
+c)cp
+d)mv
+2.Which command is used to read the input from the user ?
+a)get
+b)read
+c)scan
+d)echo
+3.what is the command used to find the pattern in a file?
+a)wc
+b)find
+c)grep
+d)uniq
+4.what is the command used to exit from shell ?
+a)clear
+b)quit
+c)exit
+d)close
+5.what is the command to store all the command line arguments into an array arr?
+a)arr(@)
+b)arr=($@)
+c)arr=($#)
+d)arr={$} 

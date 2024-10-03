@@ -1,0 +1,176 @@
+Skip to main content
+LMS
+LMS
+Advanced C: 22038
+Started on	Thursday, 9 February 2023, 1:24 PM
+State	Finished
+Completed on	Thursday, 9 February 2023, 3:24 PM
+Time taken	2 hours
+Grade	72.00 out of 100.00
+Question 1
+Correct
+Mark 2.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+int *f();
+
+int main()
+
+{   
+
+    int *p = f();
+
+    printf("Welcome ");
+
+    printf("%d\n", *p);
+
+}   
+
+int *f()
+
+{   
+
+    int j = 10;
+
+    return &j;
+
+}
+
+
+a.
+Yes, Syntax error
+
+
+b.
+No, it always prints Welcome 10
+
+
+c.
+Yes, should not return address of local variable
+
+
+d.
+No, it always prints Welcome Garbage value
+Feedback
+Your answer is correct.
+The correct answer is:
+Yes, should not return address of local variable
+
+Question 2
+Correct
+Mark 1.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+void foo(int*);
+
+int main()
+
+{   
+
+        int i = 30, *p = &i; 
+
+        foo(p++);
+
+}   
+
+void foo(int *p) 
+
+{   
+
+        printf("%d\n", ++(*p));
+
+}
+
+
+a.
+31
+
+
+b.
+Garbage value
+
+
+c.
+30
+
+
+d.
+Compiler error
+
+Feedback
+Your answer is correct.
+The correct answer is:
+31
+
+Question 3
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+int x = 0;
+
+int fun1()
+
+{
+
+        if (x == 0)
+
+                return x + 1;
+
+        else
+
+                return x - 1;
+
+}
+
+int fun2()
+
+{
+
+        return x++;
+
+}
+
+int main()
+
+{
+
+        fun1();
+
+        fun2();
+
+        printf("The value of x is %d\n", x);
+
+}
+
+
+a.
+1
+
+
+b.
+0
+
+
+c.
+Garbage value
+
+
+d.
+Compiler Error (by using extern keyword, should access the global variable in main)
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+1
+
+Next page ►
+Skip <span id="mod_quiz_navblock_title">Quiz navigation</span>
+Quiz navigation
+Show all questions on one page

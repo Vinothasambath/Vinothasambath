@@ -1,0 +1,116 @@
+Skip to main content
+LMS
+LMS
+Advanced C: 22038
+Started on	Friday, 27 January 2023, 12:51 PM
+State	Finished
+Completed on	Friday, 27 January 2023, 2:51 PM
+Time taken	2 hours
+Marks	70.00/117.00
+Grade	59.83 out of 100.00
+Question 1
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+If sizeof(long ) equals 4. What is sizeof(long long )
+
+Answer: 
+8
+Feedback
+The correct answer is: Implementation Dependent
+Question 2
+Incorrect
+Mark 0.00 out of 1.00
+Not flaggedFlag question
+Question text
+What is the output of the following code?
+
+int main()
+
+{
+
+    unsigned int i = -3;
+
+    do
+
+    {
+
+        i++;
+
+        printf("%d\n", --i);
+
+    }while (i <= 0);
+
+}
+
+
+
+a.
+Runtime error
+
+b.
+-3 Infinite Times
+
+c.
+-3
+
+d.
+Syntax error
+Feedback
+Your answer is incorrect.
+The correct answer is: -3
+Question 3
+Incorrect
+Mark 0.00 out of 2.00
+Not flaggedFlag question
+Question text
+What is output of the following code?
+
+int main() 
+
+{ 
+
+        static int i; 
+
+        for(++i ; ++i ; ++i) 
+
+        { 
+
+                printf("%d ", i); 
+
+                if(i-- == 4)
+
+                        break; 
+
+        } 
+
+        return 0; 
+
+} 
+
+
+a.
+2 3 4
+
+
+b.
+Compiler Error
+
+
+c.
+2 4
+
+
+d.
+Infinite loop
+
+Feedback
+Your answer is incorrect.
+The correct answer is:
+2 3 4
+
+Next page ►
+Skip <span id="mod_quiz_navblock_title">Quiz navigation</span>
+Quiz navigation
+Show all questions on one page
